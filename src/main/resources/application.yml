@@ -19,7 +19,7 @@ spring:
     username: root
     password: roiland
     driver-class-name: com.mysql.jdbc.Driver
-type: com.alibaba.druid.pool.DruidDataSource
+    #type: com.alibaba.druid.pool.DruidDataSource
     # 初始化大小，最小，最大
     initialSize: 5
     minIdle: 5
