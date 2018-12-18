@@ -15,7 +15,7 @@ spring:
   profiles: dev
 
   datasource:
-    url: jdbc:mysql://192.168.215.233:3306/test?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
+    url: jdbc:mysql://192.168.215.233:3306/shiro_demo?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
     username: root
     password: roiland
     driver-class-name: com.mysql.jdbc.Driver
