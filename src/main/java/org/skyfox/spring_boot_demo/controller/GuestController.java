@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/guest") 
@@ -26,6 +27,17 @@ public class GuestController{
 	@RequestMapping(value = "/getMessage", method = RequestMethod.GET) 
 	@ResponseBody
 	public ResultMap submitLogin() {
+		
 		return resultMap.success().message("您拥有获得该接口的信息的权限！");
 	} 
+	
+	@RequestMapping(value="/page")
+	@ResponseBody
+	public ModelAndView goHome(){
+		System.out.println("go to the home page!");
+		ModelAndView mode = new ModelAndView();
+		mode.addObject("name", "zhangsan");
+		mode.setViewName("index");
+		return mode;
+	}
 }

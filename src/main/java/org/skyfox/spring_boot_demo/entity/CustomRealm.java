@@ -31,7 +31,8 @@ public class CustomRealm extends AuthorizingRealm {
 	     * @param principalCollection
 	     * @return
 	     */ 
-	 @Override protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+	 @Override 
+	 protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
 		 System.out.println("————权限认证————"); 
 		 String username = (String) SecurityUtils.getSubject().getPrincipal();
 		 SimpleAuthorizationInfo info = new SimpleAuthorizationInfo(); 
